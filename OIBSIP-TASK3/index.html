@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Temperature Converter</title>
+</head>
+<body>
+<header>
+    <div style>
+    <img src="temperature.png" alt="logo">
+    </div>
+</header>
+<div class="container">
+    <div class="head">Temperature Converter</div>
+    <div class="boxcontainer">
+        <div class="box1">
+            <p>Input</p>
+            <input type="number" class="takeval" />
+        </div>
+        <div class="box1">
+            <p>Type</p>
+            <select name="" id="unit">   
+                 <option value="Fahrenheit">Fahrenheit</option> 
+                 <option value="Celcius">Celcius</option> 
+                 <option value="Kelvin">Kelvin</option>
+            </select>
+        </div>
+    </div>
+    <div class="valuecontainer">
+        <p>Result</p>
+        <div class="value"></div>
+    </div>
+    <button onclick="temperature()" class="button"><b>CONVERT</b></button>
+</div>
+    <script src="main.js"></script>
+    <footer>
+        <p class="copyright">&copy; Copyright 2023 <a href="#"></a>Gargi Kale</a></p>
+    </footer>
+</body>
+</html>

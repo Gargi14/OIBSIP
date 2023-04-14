@@ -1,0 +1,389 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #080808;
+    color: #fff;
+}
+#header{
+
+    width: 100%;
+    height: 100vh;
+    background-image: url('Laptop12.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 5px;
+    background: aquamarine;
+    position: absolute;
+    left:0;
+    bottom: -6px;
+    transition: 0.4s;
+    
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.header-text{
+    margin: 20% 60%;
+    font-size: 30px;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-text h2{
+    width: 100%;
+    height: 100vh;
+    color: white
+    
+}
+
+span{
+    color: aquamarine;
+}
+
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.title{
+    font-size: 60px;
+    font-weight: 600;
+    color:#fff
+}
+.sty{
+    font-size: 20px;
+    text-align: justify;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 50px 320px 40px;
+
+    position: relative;
+
+}
+
+.tab-links{
+    margin-right: 90px;
+    font-size: 30px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: aquamarine;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.activelink::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 15px 0;
+    position: relative;
+    left:320px;
+}
+
+.tab-contents ul li span{
+    color: aqua;
+    font-size: 20px;
+}
+
+.tab-contents ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.tab-contents{
+    display: none;
+
+}
+
+.tab-contents.active-tab{
+    display:block;
+}
+
+.timeline{
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+}
+
+.container{
+    padding: 10px 50px;
+    position: relative;
+}
+
+.textbox{
+    padding: 20px 30px;
+    background:white;
+    width: 100%;
+    color: #080808;
+    border-radius: 6px;
+    position: relative;
+    font-size: 15px;
+}
+
+.left-container{
+    left: 0;
+    width: 50%;
+    border-radius: 10px;
+}
+
+.right-container{
+    left: 50%;
+    width: 50%;
+    border-radius: 10px;
+}
+
+.timeline::after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    background:aqua; 
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: -1;
+    animation: moveline 16s reverse;
+}
+
+@keyframes moveline{
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 100%;
+    }
+}
+
+.textbox header{
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.textbox h2{
+    display:inline-block;
+    margin-bottom: 15px;
+}
+
+.left-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #fff;
+    right: -15px;
+}
+
+.right-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #fff;
+    left: -15px;
+}
+
+.btn:hover{
+    background:#ff004f;
+}
+
+#projects{
+    padding: 30px 0;
+}
+
+.project-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.project-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s,transform 0.5s;
+}
+
+.project-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.project-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.project-list div p{
+    font-size: 18px;
+}
+
+.project-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.project-list div:hover{
+    background: rgba(26, 190, 190, 0.89);
+    transform: translate(-10px);
+}
+
+/*-------Contact-----------*/
+
+.contact-left{
+    flex-basis: 35%;
+}
+
+.contact-right{
+    flex-basis:60%;
+}
+
+.contact-left p{
+    margin-top: 30px;
+}
+
+.contact-left p i{
+    color: aqua;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover{
+    color: aquamarine;
+    transform: translateY(-5px);
+}
+
+.btn{
+    display: inline-block;
+    background:aqua;
+    padding: 14px 60px;
+    border-radius: 6px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.contact-right form{
+    width: 100%;
+}
+
+form input,form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}

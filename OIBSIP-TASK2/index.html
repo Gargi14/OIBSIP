@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1 style="font-size: 50px">GARGI</h1>
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#Skills">Skills</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>   
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h2>Hello,<br>I'm a <span class="auto-type"></span></h2>
+            </div>
+                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+                <script>
+                    var typed=new Typed(".auto-type",{strings:["Web-Developer","Active Learner"],typeSpeed:150,backSpeed:150,loop:true})
+                </script>
+        </div>
+    </div>
+    <!-----about---------------------> 
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="pic.jpeg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="title">About Me</h1>
+                    <p class="sty">
+                        I'm Gargi Kale, a third year Computer Engineering Student. I am enthusiastic and social person who loves to take up new challenges and learn new skills. I love meeting new people, exchanging ideas & knowledge and spread positivity.
+                    </p><br>
+                    <p class="sty">
+                    I have recieved a scholarship from Lila Poonawalla Foundation with 4 year tution fee, mentorships and training programs from experts to make me excel in this Corporate World.
+                    Apart from this, I love to explore and keep learning new things. I believe in the mindset that nothing is impossible. I can and I will.
+                    </p><br>
+                    <p class="sty">I am open to internship opportunities & would love contributing in projects with social impact!</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!----Skills--->
+    <div id="Skills">
+        <div class="tab-titles">
+            <p class="tab-links activelink" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('certifications')">Certifications</p>
+        </div>
+    <div class="tab-contents active-tab" id="skills">
+        <ul>
+            <li><span>C++</span><br></li>
+            <li><span>Java</span><br></li>
+            <li><span>Front-end Web-Development</span><br></li>
+            <li><span>MySQL</span><br></li>
+        </ul>
+    </div>
+    <div class="tab-contents" id="experience">
+        <ul>
+            <li><span>Web-Development Intern</span><br>LetsGrowMore<br>March 2023</li>
+            <li><span>Editorial Team Member</span><br>ACES PVGCOET<br> Sept 2021- Jul 2022</li>
+            <li><span>Artificial Intelligence Intern</span><br>THREAT PRISM<br>Dec 2021- Jan 2022</li>
+        </ul>
+    </div>
+    <div class="tab-contents" id="certifications">
+        <ul>
+            <li><span>Java</span><br><a href="https://drive.google.com/file/d/1qSaqbDh88hNwzokL92DANaoaBrUGDoyp/view?usp=share_link">Spoken Tutorial Certificate</a></li>
+            <li><span>Advanced C++</span><br><a href="https://drive.google.com/file/d/1Sbo8v428O0zGGT4GeGcja9nCc9i7QBsA/view?usp=share_link">Spoken Tutorial Certificate</a></li>
+            <li><span>OOP Using C++</span><br><a href="https://drive.google.com/file/d/1x8PFMxENMtSGPdM6zolhh8x2jpc-dda2/view?usp=share_link">PICT</a></li>
+            <li><span>Microsoft MTA</span><br><a href="https://drive.google.com/file/d/16RVOGMMhfMBX_qM-e2kSBmqB_iirMtaQ/view?usp=share_link">Introduction to Programming using Python</a><br></li>
+            <li><span>Artificial Intelligence with Python</span><br><a href="https://drive.google.com/file/d/16O3rnt81LSpw16ZnVvt3FxpBY33Q6V6P/view?usp=share_link">E-Cell IIT Guwahati</a></li>
+            <li><span>Internship Completion Certificate</span><br><a href="https://drive.google.com/file/d/1i4l5vMj4YZHOl8Ak8NTkJEzTDqVCP1Tv/view?usp=share_link">Threat Prism</a></li>
+        </ul>
+    </div>
+</div>
+<script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks)
+        {
+            tablink.classList.remove("activelink");
+        }
+        for(tabcontent of tabcontents)
+        {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("activelink");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+<div id="education">
+<div class="timeline">
+    <div class="container left-container">
+        <div class="textbox">
+            <header>Bachelor of Engineering(Computer)</header>
+                <h2>Pune Vidyarthi Griha's College of Engineering & Technology,Pune</h2>
+                <small>2020-2024</small>
+                <span class="left-container-arrow"></span>
+        </div>
+    </div>
+    <div class="container right-container">
+        <div class="textbox">
+            <header>Higher Secondary Certificate(HSC)</header>
+                <h2>Late P.B Jog Junior College of Science and Commerce</h2>
+                <p>Science</p>
+                <p>83.2%</p>
+                <span class="right-container-arrow"></span>
+        </div>
+    </div>
+    <div class="container left-container">
+        <div class="textbox">
+            <header>Secondary School Certificate(SSC)</header>
+                <h2>MES Balshikshan Mandir English Medium School</h2>
+                <p>93.23%</p>
+                <span class="left-container-arrow"></span>
+        </div>
+    </div>
+
+</div>
+</div>
+<!------------Projects---------------------->
+<div id="projects">
+    <div class="container">
+        <h1 class="subtitle">My Projects</h1>
+        <div class="project-list">
+            <div>
+                <i class="fa-solid fa-list"></i>
+                <h2>Do to List</h2>
+                <p>A to do list application where you can add the tasks you want to complete and delete the task whenever they are completed.</p>
+                <a href="https://github.com/Gargi14/LGMVIP/tree/main/todolist">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-cloud"></i>
+                <h2>Weather Forecast</h2>
+                <p>A Weather Forecast application build using Tkinter and openweathermap api</p>
+                <a href="https://github.com/Gargi14/Weather_Forecast">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-calculator"></i>
+                <h2>Calculator</h2>
+                <p>A Calculator build using Html,Css,Javascript</p>
+                <a href="https://github.com/Gargi14/LGMVIP/tree/main/Calci2">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--------------Contact--------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> gargikale2020@gmail.com</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/gargikale1401/"><i class="fa-brands fa-linkedin"></i> Connect</a>
+                </div>
+            </div>
+            <div class="contact-right">
+            <form>
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+            </div>
+        </div>
+    </div>
+
+<div class="copyright">
+    <p>Copyright © Gargi Kale 2023</p>
+</div>
+</div>
+</body>
+</html>
